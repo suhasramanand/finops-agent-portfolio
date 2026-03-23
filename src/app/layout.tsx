@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description:
     "AI-powered multi-agent system for financial policy and compliance questions. RAG-powered retrieval, structured answers, and audit trails.",
   keywords: ["FinOps", "compliance", "policy", "AI", "RAG", "enterprise"],
+  icons: { icon: "/favicon.svg" },
   openGraph: {
     title: "FinOps Agent - Enterprise Policy Assistant",
     description: "AI-powered compliance assistant with RAG, citations, and action plans.",
