@@ -7,7 +7,7 @@ export function Header() {
         <a href="#" className="text-lg font-semibold text-[var(--foreground)]">
           FinOps Agent
         </a>
-        <div className="flex gap-6">
+        <div className="flex gap-4 sm:gap-6">
           <a href="#about" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
             About
           </a>
