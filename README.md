@@ -23,5 +23,7 @@ The demo connects to the FinOps Agent API. Set `NEXT_PUBLIC_API_URL` to your API
 ## Deploy to Vercel
 
 ```bash
-vercel
+npx vercel
 ```
+
+Ensure `NEXT_PUBLIC_API_URL` is set in Vercel project settings if the demo should connect to a live API.
