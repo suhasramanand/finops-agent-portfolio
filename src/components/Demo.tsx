@@ -56,7 +56,7 @@ export function Demo() {
       <div className="mx-auto max-w-3xl">
         <h2 className="text-2xl font-bold text-[var(--foreground)]">Live Demo</h2>
         <p className="mt-4 text-[var(--muted)]">
-          Ask a policy question. Example: &quot;What documentation is required for disputes over $5000?&quot;
+          Ask a policy question—try: &quot;What documentation is required for disputes over $5000?&quot; or &quot;How many days for standard dispute review?&quot;
         </p>
         <form onSubmit={handleSubmit} className="mt-6">
           <textarea
