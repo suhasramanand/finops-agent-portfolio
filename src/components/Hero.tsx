@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden px-4 py-24 sm:py-32">
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-[var(--foreground)] sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-[var(--foreground)] sm:text-5xl md:text-6xl leading-tight">
           Enterprise Policy & Compliance,{" "}
           <span className="text-[var(--accent)]">AI-Assisted</span>
         </h1>
