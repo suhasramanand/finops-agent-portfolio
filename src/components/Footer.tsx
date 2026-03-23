@@ -6,7 +6,7 @@ export function Footer() {
           FinOps Agent · Enterprise Policy & Compliance Assistant
         </p>
         <a
-          href="https://github.com"
+          href="https://github.com/suhasramanand/finops-agent-portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-[var(--accent)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--accent)] rounded"
