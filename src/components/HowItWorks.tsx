@@ -6,7 +6,7 @@ export function HowItWorks() {
         <p className="mt-4 text-[var(--muted)]">
           The system uses a LangGraph-based pipeline with specialized agents.
         </p>
-        <div className="mt-12 space-y-8">
+        <div className="mt-12 space-y-8" role="list">
           <div className="flex gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-sm font-bold text-white">
               1
