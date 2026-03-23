@@ -8,13 +8,13 @@ export function About() {
           It answers policy and compliance questions by retrieving relevant documentation, synthesizing answers with citations, and generating actionable follow-up plans.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-[var(--border)] p-6">
+          <div className="rounded-xl border border-[var(--border)] p-6 transition-shadow hover:shadow-md">
             <h3 className="font-semibold text-[var(--foreground)]">RAG-Powered</h3>
             <p className="mt-2 text-sm text-[var(--muted)]">
               Retrieval-Augmented Generation ensures answers are grounded in your actual policy documents, not hallucinated.
             </p>
           </div>
-          <div className="rounded-xl border border-[var(--border)] p-6">
+          <div className="rounded-xl border border-[var(--border)] p-6 transition-shadow hover:shadow-md">
             <h3 className="font-semibold text-[var(--foreground)]">Full Audit Trail</h3>
             <p className="mt-2 text-sm text-[var(--muted)]">
               Every query, retrieval, and response is logged for compliance and accountability.
