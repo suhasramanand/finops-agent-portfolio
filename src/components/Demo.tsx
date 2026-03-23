@@ -63,7 +63,7 @@ export function Demo() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="e.g. What documentation is required for disputes over $5000?"
-            className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent"
             rows={3}
             disabled={loading}
           />
