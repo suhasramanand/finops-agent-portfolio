@@ -9,7 +9,7 @@ export function Footer() {
           href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-[var(--accent)] hover:underline"
+          className="text-sm text-[var(--accent)] hover:underline focus:outline-none focus:ring-2 focus:ring-[var(--accent)] rounded"
         >
           View on GitHub
         </a>
