@@ -79,16 +79,16 @@ export function Demo() {
     <section id="demo" className="scroll-mt-20 px-4 py-24">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-2xl font-bold text-zinc-100 sm:text-3xl">Live Demo</h2>
-        <p className="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-500">
           Ask a policy question—try: &quot;What documentation is required for disputes over $5000?&quot; or &quot;How many days for standard dispute review?&quot;
         </p>
-        <div className="mt-8 glass rounded-2xl border-white/5 p-6 sm:p-8">
+        <div className="mt-8 glass rounded-xl p-6 sm:p-8">
           <form onSubmit={handleSubmit}>
             <textarea
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="e.g. What documentation is required for disputes over $5000?"
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-zinc-100 placeholder:text-zinc-500 focus:border-violet-500/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900/50 px-4 py-4 text-zinc-100 placeholder:text-zinc-600 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500 transition-colors"
               rows={3}
               disabled={loading}
             />
@@ -96,7 +96,7 @@ export function Demo() {
               <button
                 type="submit"
                 disabled={loading}
-                className="glow-button rounded-xl px-6 py-3 text-sm font-semibold text-white disabled:opacity-50 disabled:hover:transform-none"
+                className="rounded-lg bg-zinc-100 px-6 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-200 disabled:opacity-50 transition-colors"
               >
                 {loading ? "Thinking…" : "Submit Query"}
               </button>
@@ -106,14 +106,14 @@ export function Demo() {
                   setError(null);
                   setResult(SAMPLE_RESPONSE);
                 }}
-                className="rounded-xl border border-white/10 px-6 py-3 text-sm font-medium text-zinc-300 hover:bg-white/5 transition-all"
+                className="rounded-lg border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 hover:bg-zinc-800/50 transition-colors"
               >
                 View sample response
               </button>
             </div>
           </form>
           {error && (
-            <div className="mt-6 rounded-xl border border-amber-500/20 bg-amber-500/10 p-4 text-amber-300 text-sm">
+            <div className="mt-6 rounded-lg border border-zinc-700 bg-zinc-800/30 p-4 text-zinc-400 text-sm">
               {error}
             </div>
           )}
@@ -121,17 +121,17 @@ export function Demo() {
             <div className="mt-8 space-y-6">
               <div>
                 <h3 className="font-semibold text-zinc-100">Answer</h3>
-                <p className="mt-2 text-zinc-400 leading-relaxed">{result.answer}</p>
+                <p className="mt-2 text-zinc-500 leading-relaxed">{result.answer}</p>
               </div>
               {result.citations?.length > 0 && (
                 <div>
                   <h3 className="font-semibold text-zinc-100">Citations</h3>
                   <ul className="mt-3 space-y-3">
                     {result.citations.map((c, i) => (
-                      <li key={i} className="rounded-xl border border-white/5 bg-white/5 p-4 text-sm">
-                        <span className="font-medium text-violet-300">{c.source}</span>
-                        {c.page != null && <span className="text-zinc-500"> (p.{c.page})</span>}
-                        <p className="mt-2 text-zinc-400">{c.excerpt}</p>
+                      <li key={i} className="rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 text-sm">
+                        <span className="font-medium text-zinc-300">{c.source}</span>
+                        {c.page != null && <span className="text-zinc-600"> (p.{c.page})</span>}
+                        <p className="mt-2 text-zinc-500">{c.excerpt}</p>
                       </li>
                     ))}
                   </ul>
@@ -144,21 +144,21 @@ export function Demo() {
                     {result.action_plan.tasks.map((t, i) => (
                       <li key={i} className="flex items-center gap-3">
                         <span
-                          className={`shrink-0 rounded-lg px-2.5 py-1 text-xs font-medium ${
+                          className={`shrink-0 rounded px-2 py-1 text-xs font-medium ${
                             t.priority === "high"
-                              ? "bg-rose-500/20 text-rose-400"
-                              : "bg-violet-500/20 text-violet-400"
+                              ? "bg-zinc-700 text-zinc-300"
+                              : "bg-zinc-800 text-zinc-400"
                           }`}
                         >
                           {t.priority}
                         </span>
-                        <span className="text-sm text-zinc-300">{t.title}</span>
+                        <span className="text-sm text-zinc-400">{t.title}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               )}
-              <p className="text-xs text-zinc-500">
+              <p className="text-xs text-zinc-600">
                 Confidence: {(result.metadata.confidence * 100).toFixed(0)}% · Latency: {result.metadata.latency_ms}ms
               </p>
             </div>

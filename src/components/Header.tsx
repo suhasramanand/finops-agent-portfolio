@@ -8,16 +8,16 @@ export function Header() {
           FinOps Agent
         </a>
         <div className="flex gap-6 sm:gap-8">
-          <a href="#about" className="text-sm text-zinc-400 hover:text-white transition-colors">
+          <a href="#about" className="text-sm text-zinc-500 hover:text-zinc-200 transition-colors">
             About
           </a>
-          <a href="#how-it-works" className="text-sm text-zinc-400 hover:text-white transition-colors">
+          <a href="#how-it-works" className="text-sm text-zinc-500 hover:text-zinc-200 transition-colors">
             How it Works
           </a>
-          <a href="#demo" className="text-sm text-zinc-400 hover:text-white transition-colors">
+          <a href="#demo" className="text-sm text-zinc-500 hover:text-zinc-200 transition-colors">
             Demo
           </a>
-          <a href="#impact" className="text-sm text-zinc-400 hover:text-white transition-colors">
+          <a href="#impact" className="text-sm text-zinc-500 hover:text-zinc-200 transition-colors">
             Impact
           </a>
         </div>
