@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinOps Agent – Portfolio Site
 
-## Getting Started
+Portfolio site showcasing the FinOps Agent project: an enterprise multi-agent support assistant for financial policy and compliance.
 
-First, run the development server:
+## Sections
+
+- **About** – What FinOps Agent is and its key features
+- **How it Works** – Pipeline overview (Retrieve → Policy → Action → Audit)
+- **Demo** – Live query interface (connects to the agent API)
+- **Impact** – Benefits, metrics, and tech stack
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The demo connects to the FinOps Agent API. Set `NEXT_PUBLIC_API_URL` to your API base URL (e.g. `https://your-agent.vercel.app` or `http://localhost:8000`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy to Vercel
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+vercel
+```
