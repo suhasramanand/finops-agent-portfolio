@@ -23,6 +23,29 @@ interface QueryResponse {
   metadata: { confidence: number; latency_ms: number };
 }
 
+const SAMPLE_RESPONSE: QueryResponse = {
+  answer:
+    "For disputes over $5,000, the required documentation includes: Form DIS-501 (Enhanced Dispute Documentation Form), proof of identity (government-issued ID), bank statements covering the transaction period, written affidavit if the dispute involves fraud, police report (if applicable for fraud cases), and any correspondence with the merchant.",
+  citations: [
+    {
+      source: "sample_policy.txt",
+      page: null,
+      excerpt:
+        "2.2 For disputes $5,000 and ABOVE: All of the above, PLUS: - Form DIS-501 (Enhanced Dispute Documentation Form) - Proof of identity (government-issued ID) - Bank statements covering the transaction period...",
+    },
+  ],
+  action_plan: {
+    tasks: [
+      { title: "Gather Form DIS-501", priority: "medium", description: "Obtain and complete the Enhanced Dispute Documentation Form" },
+      { title: "Collect proof of identity", priority: "medium", description: "Provide a government-issued ID" },
+      { title: "Retrieve bank statements", priority: "medium", description: "Covering the transaction period" },
+    ],
+    assignee: null,
+    due_date: null,
+  },
+  metadata: { confidence: 1.0, latency_ms: 0 },
+};
+
 export function Demo() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
@@ -45,7 +68,8 @@ export function Demo() {
       const data = await res.json();
       setResult(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to reach API. Is the agent running?");
+      setError("API unavailable — showing sample response");
+      setResult(SAMPLE_RESPONSE);
     } finally {
       setLoading(false);
     }
@@ -67,13 +91,25 @@ export function Demo() {
             rows={3}
             disabled={loading}
           />
-          <button
-            type="submit"
-            disabled={loading}
-            className="mt-4 rounded-lg bg-[var(--accent)] px-6 py-2.5 text-sm font-medium text-white hover:bg-[var(--accent-dark)] disabled:opacity-50 transition-colors"
-          >
-            {loading ? "Thinking…" : "Submit Query"}
-          </button>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <button
+              type="submit"
+              disabled={loading}
+              className="rounded-lg bg-[var(--accent)] px-6 py-2.5 text-sm font-medium text-white hover:bg-[var(--accent-dark)] disabled:opacity-50 transition-colors"
+            >
+              {loading ? "Thinking…" : "Submit Query"}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setError(null);
+                setResult(SAMPLE_RESPONSE);
+              }}
+              className="rounded-lg border border-[var(--border)] px-6 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--card)] transition-colors"
+            >
+              View sample response
+            </button>
+          </div>
         </form>
         {error && (
           <div className="mt-6 rounded-lg border border-amber-500/50 bg-amber-500/10 p-4 text-amber-700 dark:text-amber-400">
