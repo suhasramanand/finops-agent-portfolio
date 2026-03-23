@@ -20,7 +20,7 @@ export function Impact() {
             </p>
           </div>
           <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-6">
-            <div className="text-2xl font-bold text-[var(--accent)]">RAG</div>
+            <div className="text-2xl font-bold text-[var(--accent)]">Cited</div>
             <p className="mt-2 text-sm text-[var(--muted)]">
               Grounded answers with citations—no hallucination; every claim traceable to source docs.
             </p>
